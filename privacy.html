@@ -1,0 +1,43 @@
+<article lang="en">
+  <h1>Privacy</h1>
+
+  <h3><strong>Single Purpose</strong></h3>
+  <p>Spoiler Shield automatically hides news and content related to topics selected by the user (TV series, shows, sporting events, etc.) while they browse the web, helping them avoid unwanted spoilers.</p>
+
+  <h3><strong>Permissions</strong></h3>
+
+  <p><strong>storage</strong></p>
+  <p>This permission is used to save the list of blocked topics and per-site exceptions locally on the user's device. No data is synchronized elsewhere.</p>
+
+  <p><strong>activeTab</strong></p>
+  <p>This permission is used only to read the URL of the active tab when the user opens the extension's popup, so the “exclude this site” option can be displayed. It is not used to read other tabs or browsing history.</p>
+
+  <p><strong>Host permissions (content script on http(s)://*/*)</strong></p>
+  <p>The extension needs to examine text on web pages (headlines, previews, and image alternative text) to compare it with the topics the user has chosen to block. Because a spoiler may appear on any news site, social platform, or forum, this feature requires access to all HTTP and HTTPS pages. A narrower set of sites would not cover this use case. All matching takes place locally in the browser: page content is not collected, saved, or sent elsewhere.</p>
+
+  <h3><strong>Remote Code Declaration</strong></h3>
+  <p>The extension does not download or execute any remote code. All JavaScript code is included in the uploaded package and is readable in plain text, without minification or obfuscation.</p>
+
+  <h3><strong>Data Use / Privacy Practices FAQ</strong></h3>
+  <ul>
+    <li>Does the extension collect personal data? <strong>No.</strong></li>
+    <li>Is data transmitted to external servers? <strong>No.</strong> Everything remains in <code>chrome.storage.local</code> on the user's device.</li>
+    <li>Web page content (text and headlines) is read and processed <strong>only in memory, locally</strong>, to compare it with blocked topics. It is never saved or transmitted.</li>
+    <li>Is data sold to third parties? <strong>Not applicable: we do not collect data.</strong></li>
+    <li>Is data used for purposes unrelated to the stated purpose, such as advertising, profiling, or credit and lending decisions? <strong>No.</strong></li>
+  </ul>
+  <p><strong>Statements on Data </strong></p>
+    We do not sell data; <br>
+    We do not use it for purposes other than the stated purpose; <br>
+    We do not use it to determine creditworthiness. 
+   We confirm all these three statements for this extension because we do not collect any data.</p>
+
+
+  <p><strong>Declaration — Spoiler Shield</strong></p>
+  <p>Spoiler Shield does not collect personal data, store it on external servers, or transmit it. Blocked topics, per-site exceptions, and the selected language are stored exclusively on the user's device through Google Chrome's <code>chrome.storage.local</code> API.</p>
+  <p>To identify spoilers, the extension analyzes the text of visited web pages (headlines, previews, and image text) entirely within the user's browser. This content is never collected, recorded, shared, or sent to MK Web Studio or any third party.</p>
+  <p>The use of information received through Google APIs complies with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+  <p>For questions, contact: web@mkwebstudio.com or fill the form on mkwebstudio.com.</p>
+
+
+</article>
