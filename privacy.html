@@ -1,43 +1,125 @@
-<article lang="en">
-  <h1>Privacy</h1>
+<style>
+  .spoiler-privacy {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10vh 5% 60px 10%;
+    background-color: #f9f9f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
 
-  <h3><strong>Single Purpose</strong></h3>
-  <p>Spoiler Shield automatically hides news and content related to topics selected by the user (TV series, shows, sporting events, etc.) while they browse the web, helping them avoid unwanted spoilers.</p>
+  .spoiler-privacy * {
+    box-sizing: border-box;
+  }
 
-  <h3><strong>Permissions</strong></h3>
+  .spoiler-privacy article {
+    max-width: 800px;
+  }
 
-  <p><strong>storage</strong></p>
-  <p>This permission is used to save the list of blocked topics and per-site exceptions locally on the user's device. No data is synchronized elsewhere.</p>
+  .spoiler-privacy h1 {
+    margin: 0 0 40px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #111;
+  }
 
-  <p><strong>activeTab</strong></p>
-  <p>This permission is used only to read the URL of the active tab when the user opens the extension's popup, so the “exclude this site” option can be displayed. It is not used to read other tabs or browsing history.</p>
+  .spoiler-privacy h3 {
+    margin: 36px 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #111;
+  }
 
-  <p><strong>Host permissions (content script on http(s)://*/*)</strong></p>
-  <p>The extension needs to examine text on web pages (headlines, previews, and image alternative text) to compare it with the topics the user has chosen to block. Because a spoiler may appear on any news site, social platform, or forum, this feature requires access to all HTTP and HTTPS pages. A narrower set of sites would not cover this use case. All matching takes place locally in the browser: page content is not collected, saved, or sent elsewhere.</p>
+  .spoiler-privacy p {
+    margin: 0 0 16px;
+  }
 
-  <h3><strong>Remote Code Declaration</strong></h3>
-  <p>The extension does not download or execute any remote code. All JavaScript code is included in the uploaded package and is readable in plain text, without minification or obfuscation.</p>
+  .spoiler-privacy ul {
+    margin: 0 0 24px;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
 
-  <h3><strong>Data Use / Privacy Practices FAQ</strong></h3>
-  <ul>
-    <li>Does the extension collect personal data? <strong>No.</strong></li>
-    <li>Is data transmitted to external servers? <strong>No.</strong> Everything remains in <code>chrome.storage.local</code> on the user's device.</li>
-    <li>Web page content (text and headlines) is read and processed <strong>only in memory, locally</strong>, to compare it with blocked topics. It is never saved or transmitted.</li>
-    <li>Is data sold to third parties? <strong>Not applicable: we do not collect data.</strong></li>
-    <li>Is data used for purposes unrelated to the stated purpose, such as advertising, profiling, or credit and lending decisions? <strong>No.</strong></li>
-  </ul>
-  <p><strong>Statements on Data </strong></p>
-    We do not sell data; <br>
-    We do not use it for purposes other than the stated purpose; <br>
-    We do not use it to determine creditworthiness. 
-   We confirm all these three statements for this extension because we do not collect any data.</p>
+  .spoiler-privacy li {
+    margin-bottom: 12px;
+  }
 
+  .spoiler-privacy code {
+    overflow-wrap: anywhere;
+  }
 
-  <p><strong>Declaration — Spoiler Shield</strong></p>
-  <p>Spoiler Shield does not collect personal data, store it on external servers, or transmit it. Blocked topics, per-site exceptions, and the selected language are stored exclusively on the user's device through Google Chrome's <code>chrome.storage.local</code> API.</p>
-  <p>To identify spoilers, the extension analyzes the text of visited web pages (headlines, previews, and image text) entirely within the user's browser. This content is never collected, recorded, shared, or sent to MK Web Studio or any third party.</p>
-  <p>The use of information received through Google APIs complies with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
-  <p>For questions, contact: web@mkwebstudio.com or fill the form on mkwebstudio.com.</p>
+  .spoiler-privacy a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+  }
 
+  .spoiler-privacy a:hover {
+    text-decoration: underline;
+  }
 
-</article>
+  @media (max-width: 600px) {
+    .spoiler-privacy {
+      padding: 5vh 5% 40px;
+    }
+
+    .spoiler-privacy h1 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .spoiler-privacy h3 {
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+  }
+</style>
+
+<div class="spoiler-privacy">
+  <article lang="en">
+    <h1>Privacy</h1>
+
+    <h3>Single Purpose</h3>
+    <p>Spoiler Shield automatically hides news and content related to topics selected by the user (TV series, shows, sporting events, etc.) while they browse the web, helping them avoid unwanted spoilers.</p>
+
+    <h3>Permissions</h3>
+
+    <p><strong>storage</strong></p>
+    <p>This permission is used to save the list of blocked topics and per-site exceptions locally on the user's device. No data is synchronized elsewhere.</p>
+
+    <p><strong>activeTab</strong></p>
+    <p>This permission is used only to read the URL of the active tab when the user opens the extension's popup, so the “exclude this site” option can be displayed. It is not used to read other tabs or browsing history.</p>
+
+    <p><strong>Host permissions (content script on http(s)://*/*)</strong></p>
+    <p>The extension needs to examine text on web pages (headlines, previews, and image alternative text) to compare it with the topics the user has chosen to block. Because a spoiler may appear on any news site, social platform, or forum, this feature requires access to all HTTP and HTTPS pages. A narrower set of sites would not cover this use case. All matching takes place locally in the browser: page content is not collected, saved, or sent elsewhere.</p>
+
+    <h3>Remote Code Declaration</h3>
+    <p>The extension does not download or execute any remote code. All JavaScript code is included in the uploaded package and is readable in plain text, without minification or obfuscation.</p>
+
+    <h3>Data Use / Privacy Practices FAQ</h3>
+    <ul>
+      <li>Does the extension collect personal data? <strong>No.</strong></li>
+      <li>Is data transmitted to external servers? <strong>No.</strong> Everything remains in <code>chrome.storage.local</code> on the user's device.</li>
+      <li>Web page content (text and headlines) is read and processed <strong>only in memory, locally</strong>, to compare it with blocked topics. It is never saved or transmitted.</li>
+      <li>Is data sold to third parties? <strong>Not applicable: we do not collect data.</strong></li>
+      <li>Is data used for purposes unrelated to the stated purpose, such as advertising, profiling, or credit and lending decisions? <strong>No.</strong></li>
+    </ul>
+
+    <p><strong>Statements on Data</strong></p>
+    <ul>
+      <li>We do not sell data.</li>
+      <li>We do not use it for purposes other than the stated purpose.</li>
+      <li>We do not use it to determine creditworthiness.</li>
+    </ul>
+    <p>We confirm all three statements for this extension because we do not collect any data.</p>
+
+    <p><strong>Declaration — Spoiler Shield</strong></p>
+    <p>Spoiler Shield does not collect personal data, store it on external servers, or transmit it. Blocked topics, per-site exceptions, and the selected language are stored exclusively on the user's device through Google Chrome's <code>chrome.storage.local</code> API.</p>
+    <p>To identify spoilers, the extension analyzes the text of visited web pages (headlines, previews, and image text) entirely within the user's browser. This content is never collected, recorded, shared, or sent to MK Web Studio or any third party.</p>
+    <p>The use of information received through Google APIs complies with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+    <p>For questions, email <a href="mailto:web@mkwebstudio.com">web@mkwebstudio.com</a> or fill out the form on <a href="https://mkwebstudio.com/">mkwebstudio.com</a>.</p>
+  </article>
+</div>
